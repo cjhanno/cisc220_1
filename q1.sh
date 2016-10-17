@@ -1,5 +1,4 @@
 #!/bin/bash
-#test
 
 result=0
 counter=0
