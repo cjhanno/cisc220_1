@@ -17,6 +17,7 @@ while true; do
 		echo "Please enter an operator: "
 		read operator
 		if [ "$operator" == "q" ]; then
+                        echo "Thanks for using my calculator";
 			break
 		elif [ "$operator" == "+" ]; then
 			counter=2
