@@ -21,6 +21,11 @@ echo ${carA[*]}
 echo ${carB[*]}
 echo ${carC[*]}
 
+#while read -r var ; do
+#	if [[$var==1]]; then
+#	for (( b=0; b<40; b++ )); do carA[b]="~";done
+#	fi
+#done
 
 #while loop combined with read var to see what user inputs modify track
 #user enter's 1 then carA append ~ to begining of list
