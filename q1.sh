@@ -1,5 +1,5 @@
 #!/bin/bash
-
+clear
 result=0
 counter=0
 while true; do
