@@ -4,12 +4,12 @@
 
 clear
 
-echo "Hello, user. Lets see what your IP is:"
-
 var=$(ifconfig ens33|grep 'inet addr:'|awk '{print $2}'|sed -r 's/.{5}//')
 
 if [[ $var == 127* ]]; then
-	echo "Your IP is $var and this is a Local IP";
+	echo "$var Local IP";
+elif [[ $var == 10* ]] || [[ $var == 192.168* ]] ; then
+	echo "$var Private IP";
 else
-	echo "Your IP is $var and this is a Private IP";
+	echo "$var Public IP";
 fi
