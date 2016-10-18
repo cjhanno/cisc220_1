@@ -47,7 +47,7 @@ while true; do
 			echo "Your current result is: $result"
 			counter=1
 		else
-			echo "Invalud input"
+			echo "Invalid input"
 		fi
 	fi
 done
