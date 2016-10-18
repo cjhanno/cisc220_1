@@ -29,15 +29,13 @@ echo ${carC[*]}
 
 #bonus?
 
-# read -p "How many users are playing?"
+#read -p "How many players are racing today: " -n1 var
+#x=1
+#echo "car$x"
 
-read -p "How many players are racing today: " -n1 var
-x=1
-echo "car$x"
-
-while ((x<=$var)); do
-	car$x=("|->"); 
-	car$x[41]="# Lane $x #";
-	for (( n=1; n<=$var; n++ )); do car$x[n]="-"; done
-	$x+=1;
-	done  
+#while ((x<=$var)); do
+#	car$x=("|->"); 
+#	car$x[41]="# Lane $x #";
+#	for (( n=1; n<=$var; n++ )); do car$x[n]="-"; done
+#	$x+=1;
+#	done  
