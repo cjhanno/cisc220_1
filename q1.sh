@@ -1,4 +1,7 @@
 #!/bin/bash
+
+#question1
+
 clear
 result=0
 counter=0
