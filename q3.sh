@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#Connor Hannough			10085081
+#Vanessa Reda 			10194381
+#Ryan Kartavicius		10155548
+
 echo "Welcome to CISC220 Racing Arena"
 echo "User 1 press 1 to move forward, User 2 press 2 and User 3 press 3"
 
