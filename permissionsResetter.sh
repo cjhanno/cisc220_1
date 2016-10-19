@@ -1,38 +1,28 @@
-#!BIN/BASH
+#!/bin/bash
 
-echo what would you like to do? 
-echo input -s to show changes or -r to revert changes
-read optionInput
-echo What file would you like to revert to?
-read fileInput
 
-n=1
 
-if [ $optionInput == '-s' ]; then
-	for $file in $fileInput
-	do
-		n=$(($n + 1));
-		current=$(stat -c '%A' "$file");
-		old=$(cut -c2 $fileInput[$n]); 
+if [ "$1" == "-s" ]; then
+	for line in $2 ; do
+		current=$(ls -l $line* | awk '{print $1 " "$NF}'| cut -c1-10);
+		old=$(stat -c '%A' "$line"); 
 		if [ "$current" == "$old" ]; then
-			echo "Old: $(stat -c '%A' "$file")";
-			echo "Current: $(stat -c '%A' "#currentfile")";
-			echo "File: $file";
+			echo "Old: $(stat -c '%A' "$line")";
+			echo "Current: $(ls -l $line* | awk '{print $1 " "$NF}' | cut -c1-10)";
+			echo "File: $line";
 		fi
 	done
 
 fi
-if [ $optionInput == '-r' ]; then
-	for $file in $fileInput
-	do
-		n=$(($n + 1));
-		current=$(stat -c '%A' "$file");
-		old=$(cut -c2 $fileInput[$n]);
+if [ "$1" == "-r" ]; then
+	for line in $2; do
+		current=$(ls -l $line* | awk '{print $1 " "$NF}' | cut -c1-10);
+		old=$(stat -c '%A' "$line");
 		if [ "$current" != "$old" ]; then
-			chmod $old $file	
+			chmod $old $line*;	
+			echo "$line permissions reset from $current to $old";
 		fi
 	done
 fi
 
-echo "$file permissions reset from $current to $old" 
 
