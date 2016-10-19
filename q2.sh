@@ -2,6 +2,10 @@
 
 #!/bin/bash
 
+Connor Hannough			10085081
+Vanessa Reda 			10194381
+Ryan Kartavicius		10155548
+
 clear
 
 echo "Hello, user. Lets see what your IP is:"
