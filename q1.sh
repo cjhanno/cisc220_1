@@ -1,9 +1,6 @@
 #!/bin/bash
 
 #question1
-#Connor Hannough 10085081
-#Vanessa Reda 10194381
-#Ryan Kartavicius 10155548
 
 clear
 result=0
