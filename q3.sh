@@ -65,13 +65,3 @@ echo ${carA[*]}
 echo ${carB[*]}
 echo ${carC[*]}
 done
-
-#while loop combined with read var to see what user inputs modify track
-#user enter's 1 then carA append ~ to begining of list
-
-
-
-#bonus?
-
-# read -p "How many users are playing?"
-
